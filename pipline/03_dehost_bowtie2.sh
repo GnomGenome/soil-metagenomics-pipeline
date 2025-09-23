@@ -30,10 +30,6 @@ R2="$SAMPLE_DIR/paired_R2.fq.gz"
 # SAM выход
 SAM_OUT="$SAMPLE_DIR/bowtie_output/${SAMPLE_DIR##*/}_to_human.sam"
 
-# Файлы для некартированных ридов с нужными именами сразу
-UNMAPPED_R1="$SAMPLE_DIR/non_human_R1_clean.fq.gz"
-UNMAPPED_R2="$SAMPLE_DIR/non_human_R2_clean.fq.gz"
-
 # Запуск bowtie2
 echo "[INFO] Запускаю bowtie2 для $(basename "$SAMPLE_DIR")..."
 bowtie2 -p $THREADS -x $INDEX_BASE \
